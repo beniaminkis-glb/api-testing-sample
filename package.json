@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "mocha tests/api.test.js --reporter mochawesome"
+    "test": "npm run cleanup && mocha tests/api.test.js --reporter mochawesome && open mochawesome-report/mochawesome.html",
+    "cleanup": "rm -rf mochawesome-report"
   },
   "keywords": [],
   "author": "",
